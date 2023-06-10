@@ -15,12 +15,10 @@ const start = async () => {
 };
 
 start();
+
 // middleware
 app.use(express.json());
+app.use(express.static("./public"));
 
 // routes
-app.get("/hello", (request, response) => {
-  response.send("Task Manager App");
-});
-
 app.use("/api/v1/tasks", tasks);
