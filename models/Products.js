@@ -43,6 +43,7 @@ const ProductSchema = new mongoose.Schema(
 
     colors: {
       type: [String],
+      default: ["#222"],
       required: true,
     },
 
@@ -70,7 +71,7 @@ const ProductSchema = new mongoose.Schema(
     user: {
       type: mongoose.Types.ObjectId,
       ref: "User",
-      required: True,
+      required: true,
     },
   },
   { timestamps: true }
